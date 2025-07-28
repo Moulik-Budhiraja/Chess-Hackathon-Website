@@ -160,25 +160,25 @@ export default function DemoSection() {
               id="two-king"
               type="king"
               color="white"
-              className="right-0 bottom-0 w-1/4"
+              className="top-3/4 right-0 w-1/4"
             />
             <Piece
               id="two-pawn-1"
               type="pawn"
               color="white"
-              className="right-2/4 bottom-1/4 w-1/4"
+              className="top-2/4 right-2/4 w-1/4"
             />
             <Piece
               id="two-pawn-2"
               type="pawn"
               color="white"
-              className="right-1/4 bottom-1/4 w-1/4"
+              className="top-2/4 right-1/4 w-1/4"
             />
             <Piece
               id="two-pawn-3"
               type="pawn"
               color="white"
-              className="right-0 bottom-2/4 w-1/4"
+              className="top-1/4 right-0 w-1/4"
             />
             <Piece
               id="two-rook"
