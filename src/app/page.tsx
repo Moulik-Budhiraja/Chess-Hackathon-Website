@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
+import { api } from "@/trpc/react";
+import { toast } from "sonner";
 
 const DemoSection = dynamic(() => import("./demo"), { ssr: false });
 
@@ -19,6 +21,8 @@ export default function Home() {
     [0, 1],
     ["blur(5px)", "blur(16px)"],
   );
+
+  const { mutate: registerEmail } = api.general.registerEmailList.useMutation();
 
   return (
     <main className="p-8">
@@ -40,14 +44,36 @@ export default function Home() {
             Your move, Developer • November 7-9, 2025
           </p>
 
-          <div className="mt-4 flex w-full flex-col gap-2">
-            <Input placeholder="Enter your email" className="rounded-full" />
-            <Button variant={"outline"} className="rounded-full text-white/50">
+          <form
+            className="mt-4 flex w-full flex-col gap-2"
+            action={(formData) => {
+              const email = formData.get("email");
+              if (email) {
+                registerEmail({ email: email as string });
+                toast.success("Email registered successfully");
+              } else {
+                toast.error("Please enter an email");
+              }
+            }}
+          >
+            <Input
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              className="rounded-full"
+              required
+            />
+            <Button
+              type="submit"
+              variant={"outline"}
+              className="rounded-full text-white/50"
+            >
               Sign up for updates
             </Button>
-          </div>
+          </form>
         </div>
       </section>
+
       <div className="w-full" ref={ref}>
         <DemoSection />
 
@@ -60,12 +86,33 @@ export default function Home() {
             opens.
           </p>
 
-          <div className="mt-8 flex w-full max-w-sm flex-col items-center justify-center gap-2">
-            <Input placeholder="Enter your email" className="rounded-full" />
-            <Button variant={"outline"} className="rounded-full text-white/50">
+          <form
+            className="mt-8 flex w-full max-w-sm flex-col items-center justify-center gap-2"
+            action={(formData) => {
+              const email = formData.get("email");
+              if (email) {
+                registerEmail({ email: email as string });
+                toast.success("Email registered successfully");
+              } else {
+                toast.error("Please enter an email");
+              }
+            }}
+          >
+            <Input
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              className="rounded-full"
+              required
+            />
+            <Button
+              type="submit"
+              variant={"outline"}
+              className="rounded-full text-white/50"
+            >
               Sign up for updates
             </Button>
-          </div>
+          </form>
         </section>
       </div>
     </main>
