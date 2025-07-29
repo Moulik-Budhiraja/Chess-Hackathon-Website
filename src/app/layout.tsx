@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Waterloo's first AI Chess Hackathon",
     images: [
       {
-        url: "https://chesshacks.dev/og-img-small.png",
+        url: "https://chesshacks.dev/og-img.png",
         width: 3417,
         height: 1815,
         alt: "ChessHacks Waterloo",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ChessHacks Waterloo",
     description: "Waterloo's first AI Chess Hackathon",
-    images: ["https://chesshacks.dev/og-img-small.png"],
+    images: ["https://chesshacks.dev/og-img.png"],
   },
 };
 
