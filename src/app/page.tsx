@@ -36,7 +36,9 @@ export default function Home() {
           <h1 className="font-vt323 text-5xl font-bold">
             Waterloo&apos;s First <br /> Chess AI Hackathon
           </h1>
-          <p className="text-muted-foreground mt-2 text-sm">November, 2025.</p>
+          <p className="text-muted-foreground mt-2 text-sm">
+            Your move, Developer • November 7-9, 2025
+          </p>
 
           <div className="mt-4 flex w-full flex-col gap-2">
             <Input placeholder="Enter your email" className="rounded-full" />

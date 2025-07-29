@@ -184,7 +184,7 @@ export default function DemoSection() {
               id="two-rook"
               type="rook"
               color="white"
-              className="bottom-0 left-0 w-1/4"
+              className="top-3/4 left-0 w-1/4"
             />
           </Board>
         </div>
