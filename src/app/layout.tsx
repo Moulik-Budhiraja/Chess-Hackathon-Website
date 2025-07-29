@@ -10,6 +10,26 @@ export const metadata: Metadata = {
   title: "ChessHacks Waterloo",
   description: "Waterloo's first AI Chess Hackathon",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  openGraph: {
+    type: "website",
+    url: "https://chesshacks.dev/",
+    title: "ChessHacks Waterloo",
+    description: "Waterloo's first AI Chess Hackathon",
+    images: [
+      {
+        url: "https://chesshacks.dev/og-image.png",
+        width: 3417,
+        height: 1815,
+        alt: "ChessHacks Waterloo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ChessHacks Waterloo",
+    description: "Waterloo's first AI Chess Hackathon",
+    images: ["https://chesshacks.dev/og-image.png"],
+  },
 };
 
 const geist = Geist({
