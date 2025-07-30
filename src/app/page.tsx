@@ -78,13 +78,12 @@ export default function Home() {
                 name="email"
                 type="email"
                 placeholder="Enter your email"
-                className="rounded-full"
                 required
               />
               <Button
                 type="submit"
                 variant={"outline"}
-                className="rounded-full text-white/50"
+                className="text-white/50"
                 disabled={emailSubmitting}
               >
                 Sign up for updates{" "}
@@ -113,13 +112,12 @@ export default function Home() {
                 name="email"
                 type="email"
                 placeholder="Enter your email"
-                className="rounded-full"
                 required
               />
               <Button
                 type="submit"
                 variant={"outline"}
-                className="rounded-full text-white/50"
+                className="text-white/50"
                 disabled={emailSubmitting}
               >
                 Sign up for updates{" "}
