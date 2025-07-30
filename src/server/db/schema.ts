@@ -91,8 +91,11 @@ export const emailList = createTable("email_list", (d) => ({
     .varchar({ length: 36 })
     .primaryKey()
     .default(sql`gen_random_uuid()`),
-  email: d.varchar({ length: 255 }).notNull(),
+  email: d.varchar({ length: 255 }).notNull().unique(),
   createdAt: d
+    .timestamp({ withTimezone: true })
+    .default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: d
     .timestamp({ withTimezone: true })
     .default(sql`CURRENT_TIMESTAMP`),
 }));

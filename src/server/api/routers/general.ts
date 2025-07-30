@@ -12,7 +12,11 @@ export const generalRouter = createTRPCRouter({
     .input(z.object({ email: z.string() }))
     .mutation(async ({ ctx, input }) => {
       const { email } = input;
-      await ctx.db.insert(emailList).values({ email });
-      return { success: true };
+      try {
+        await ctx.db.insert(emailList).values({ email });
+        return { success: true };
+      } catch (error) {
+        return { success: false, error: "Email already exists" };
+      }
     }),
 });

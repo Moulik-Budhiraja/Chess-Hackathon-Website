@@ -1,0 +1,2 @@
+ALTER TABLE "web_email_list" ADD COLUMN "updatedAt" timestamp with time zone DEFAULT CURRENT_TIMESTAMP;--> statement-breakpoint
+ALTER TABLE "web_email_list" ADD CONSTRAINT "web_email_list_email_unique" UNIQUE("email");

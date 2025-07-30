@@ -8,6 +8,13 @@
       "when": 1753775194619,
       "tag": "0000_add_email_list",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1753854553626,
+      "tag": "0001_make_email_unique",
+      "breakpoints": true
     }
   ]
 }
